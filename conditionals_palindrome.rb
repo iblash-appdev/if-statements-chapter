@@ -16,3 +16,17 @@
 # true
 
 p "Enter one word"
+
+input = gets.chomp
+user_input = input.upcase
+puts "You chose the word: #{user_input}"
+
+if user_input == user_input.reverse
+  
+  p true
+
+else
+
+  p false 
+
+end

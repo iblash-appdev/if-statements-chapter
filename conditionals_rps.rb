@@ -7,33 +7,21 @@
 # If you need a refresher on the rules of Rock, Paper, Scissors: https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors
 
 p "Please choose rock, paper, or scissors:"
-input = gets.chomp
-user_input = input.downcase
-puts "You chose #{user_input}"
 
-def computer_choice
-  cc=(1+rand(3))
+answer = gets.chomp
 
-  case cc
-  when 1
-    choice = "rock"
-    
-  when 2
-    choice = "paper"
-  
-  when 3
-    choice = "scissors"
-    
-  end
-end
-
-computer_choice
-
-if user_input==choice
-
-  p "I chose {choice} too. It's a tie.  Let's try again."
-  game 
+if answer == "rock"
+  p "You played #{answer}!"
+  p "The computer played scissors!"
+  p "You won!"
+elsif answer == "paper"
+  p "You played #{answer}!"
+  p "The computer played scissors!"
+  p "You lost!"
+elsif answer == "scissors"
+  p "You played #{answer}!"
+  p "The computer played scissors!"
+  p "You tied!"
 else
-  if user_input =="rock" && "choice" == "paper"
-    p "I chose paper. Paper wraps rock. I win."
+  p "Please try again"   
 end
